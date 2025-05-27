@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvos</title>
+    <link rel="stylesheet" href="denuncia.css">    
+    <link rel="shortcut icon" type="imagex/png" href="./img/navbar/dália_secundario.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="./img/navbar/Logo_dalia.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="Home"><a href="../home/index.html"><img src="./img/navbar/Home__nav.svg" alt=""></a></li>
+                <li class="Calendario"><a href="../calendario/calendario.html"><img src="./img/navbar/Calendar__nav.svg"></a></li>
+                <li class="forum"><a href="../forum/forum.html"><img src="./img/navbar/Fórum__nav.svg"></a></li>
+                <li class="principal"><a href="../principal/principal.html"><img src="./img/navbar/Flower__nav.svg" alt=""></a></li>
+                <li class="perfil"><a href="../perfil/perfil.html"><img src="./img/navbar/profile-full__nav.svg"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Denúncias</h1>
+            <div class="container-registro">
+                <div class="denuncia">
+                    <div class="informações">
+                        <h2>Denúncia</h2>
+                        <h2>data</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="./img/navbar/Logo_dalia.png" alt="logo dália" class="footer-logo">
+            <div class="language-selector">
+                <img src="./img/home_img/bandeira.png" alt="bandeira brasil">
+                <span>Português do Brasil</span>
+            </div>
+            <div class="social-media"> 
+                <a href="#" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                 <a href="#" aria-label="Youtube">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+            <div class="footer-sections">
+                <div class="section">
+                    <h4>Empresas</h4>
+                    <a href="#">Sobre</a><br>
+                    <a href="#">Marca</a>
+                </div>
+                <div class="section">
+                    <h4>Recursos</h4>
+                    <a href="#">Suporte</a><br>
+                    <a href="#">Segurança</a><br>
+                    <a href="#">Blog</a><br>
+                    <a href="#">Comunidade</a>
+                </div>
+                <div class="section">
+                    <h4>Políticas</h4>
+                    <a href="#">Termos</a><br>
+                    <a href="#">Privacidade</a><br>
+                    <a href="#">Cookies</a><br>
+                    <a href="#">Moderação</a>
+                </div>
+        </div>
+    </footer>
+</body>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Cria o botão de toggle
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '☰';
+    
+    // Cria o container do dropdown
+    const dropdownMenu = document.createElement('div');
+    dropdownMenu.className = 'dropdown-menu';
+    
+    // Clona o menu existente para dentro do dropdown
+    const navClone = document.querySelector('nav ul').cloneNode(true);
+    dropdownMenu.appendChild(navClone);
+    
+    // Adiciona os elementos ao header
+    const header = document.querySelector('header');
+    header.appendChild(menuToggle);
+    header.appendChild(dropdownMenu);
+    
+    // Adiciona evento de clique
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+    
+    // Fecha o menu ao clicar fora
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('show');
+    });
+    
+    // Previne que o clique no menu feche ele
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+</script>
+</html>

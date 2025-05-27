@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <!-- links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" th:href="@{/login.css}" />
+  <title>Dália Login</title>
+  <link rel="shortcut icon" type="imagex/png" th:href="@{/img/dália_secundario.png}" />
+</head>
+
+<body>
+  <!-- logo e cabeçalho -->
+  <div class="lado_left">
+    <img th:src="@{img/Dalia-2.0.png}" alt="Logo" class="LogoDalia" />
+    <h1>Cuidando de você<br />e de quem você ama</h1>
+  </div>
+
+  <!-- formulário -->
+  <div class="lado_direito">
+
+    <div class="form-group lado_right">
+      <h1 class="entrar">Entrar</h1>
+    </div>
+
+    <form th:action="@{/rotaLogin}" method="post">
+      <!-- inputs -->
+      <div class="form-group">
+        <input type="email" th:field="*{email}" class="form-control" id="email" placeholder="Endereço de email" required />
+        <input type="password" th:field="*{password}" class="form-control-password" id="password" placeholder="Digite a senha" required />
+        
+        <!-- lembrar senha -->
+        <label class="container">
+          Lembrar Senha
+          <input type="checkbox" name="rememberMe" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+
+      <!-- botões -->
+      <div class="botoes">
+        <button type="submit" class="botaoLogin">Login</button>
+        <a class="botaoCadastro" target="_blank" th:href="@{/dália/Dália-cadastro/cadastro.html}">Cadastre-se</a>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- vlibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper">
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script th:src="@{https://vlibras.gov.br/app/vlibras-plugin.js}"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- script local -->
+  <script th:src="@{login.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    background-image: url(img/Gradient.png);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.painel {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); /* Ajuste para sombra externa */
+    padding: 20px;
+    width: 600px;
+    max-width: 600px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.nome_sobrenome {
+    display: flex;
+    gap: 20px;
+}
+
+.form-control__nm, .form-control__sm, .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1.5px solid black;
+}
+
+.form-control__nm {
+    width: 220px;
+    flex: 1;
+}
+
+.form-control__sm {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #FB88AB;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    border: 1.5px solid  #FB88AB;
+    color: #FB88AB;
+
+}
+
+
+.cabecalho {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mantém o conteúdo centralizado */
+    position: relative;
+    padding: 10px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    text-align: center; /* Centraliza o texto dentro de seu espaço */
+    flex-grow: 1; /* Ocupará o espaço disponível entre o ícone e o final */
+}
+
+.cabecalho .voltar {
+    position: absolute;
+    left: 10px; /* Fixa o ícone à esquerda */
+    text-decoration: none; /* Remove sublinha de links */
+}
+
+.cabecalho img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nome_sobrenome {
+        flex-direction: column;
+    }
+}
+
+.frame-child {
+    flex: 1;
+    position: relative;
+    border-top: 1px solid black;
+    box-sizing: border-box;
+    height: 1px;
+}
+.ou-entre-com {
+    position: relative;
+    letter-spacing: 0.09em;
+    line-height: 67px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.line-parent {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+}
+
+.tags {
+    width: 60px;
+    position: relative;
+    height: 60px;
+}
+.tags__redes {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    gap: 60px;
+    }
+
+.termos__condicoes{
+    color: #FB88AB;
+    padding-left: 1ch;
+}
+
+/*checkbox*/ 
+.container {
+    display: flex;
+    align-items: center; /* Alinha o checkbox e o texto verticalmente */
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 18px; /* Ajusta o tamanho da fonte para combinar */
+    line-height: 20px; /* Certifica-se de que o texto e o checkbox estão bem alinhados */
+    user-select: none;
+  }
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+    border-radius: 10%;
+  }
+
+.container:hover input ~ .checkmark {
+    background-color: #ef5b99;
+  }
+
+.container input:checked ~ .checkmark {
+    background-color: #ef5b99;
+  }
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+        left: 8px; /* Ajustando o ícone de marcação */
+        top: 4px; /* Ajustando o ícone de marcação */
+        width: 4px; /* Reduzindo o tamanho da marcação */
+        height: 8px; /* Reduzindo o tamanho da marcação */
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- meta e estilos -->
+<html xmlns:th="https://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvos</title>
+    <link rel="stylesheet" th:href="@{salvos.css}">    
+    <link rel="shortcut icon" type="imagex/png" th:href="@{/img/navbar/dália_secundario.png}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img th:src="@{/img/navbar/Logo_dalia.png}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="Home"><a th:href="@{/home/index.html}"><img th:src="@{/img/navbar/Home__nav.svg}" alt=""></a></li>
+                <li class="Calendario"><a th:href="@{/calendario/calendario.html}"><img th:src="@{/img/navbar/Calendar__nav.svg}"></a></li>
+                <li class="forum"><a th:href="@{/forum/forum.html}"><img th:src="@{/img/navbar/Fórum__nav.svg}"></a></li>
+                <li class="principal"><a th:href="@{/principal/principal.html}"><img th:src="@{/img/navbar/Flower__nav.svg}" alt=""></a></li>
+                <li class="perfil"><a th:href="@{/perfil/perfil.html}"><img th:src="@{/img/navbar/profile-full__nav.svg}"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1>Matérias salvas</h1>
+                <div class="container-registro">
+                    <div class="materia">
+                        <div class="imagem-materia">
+                            <img src="" alt="capa da matéria">
+                        </div>
+                        <div class="informações">
+                            <h2>ddd</h2>
+                            <p>ccc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <img th:src="@{/img/navbar/Logo_dalia.png}" alt="logo dália" class="footer-logo">
+            <div class="language-selector">
+                <img th:src="@{/img/home_img/bandeira.png}" alt="bandeira brasil">
+                <span>Português do Brasil</span>
+            </div>
+            <div class="social-media"> 
+                <a href="#" aria-label="Instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                 <a href="#" aria-label="Youtube">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+            <div class="footer-sections">
+                <div class="section">
+                    <h4>Empresas</h4>
+                    <a href="#">Sobre</a><br>
+                    <a href="#">Marca</a>
+                </div>
+                <div class="section">
+                    <h4>Recursos</h4>
+                    <a href="#">Suporte</a><br>
+                    <a href="#">Segurança</a><br>
+                    <a href="#">Blog</a><br>
+                    <a href="#">Comunidade</a>
+                </div>
+                <div class="section">
+                    <h4>Políticas</h4>
+                    <a href="#">Termos</a><br>
+                    <a href="#">Privacidade</a><br>
+                    <a href="#">Cookies</a><br>
+                    <a href="#">Moderação</a>
+                </div>
+        </div>
+    </footer>
+</body>
+
+</html>

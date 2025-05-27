@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <!-- links -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" th:href="@{/perguntas.css}">
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css}">
+    <link rel="shortcut icon" type="image/png" th:href="@{/img/navbar/dália_secundario.png}">
+</head>
+
+<body>
+    <!-- questionário -->
+    
+    <!-- qual sua idade? -->
+    <div class="centraliza">
+
+        <div id="section1" class="formulario section active">
+
+            <div class="pergunta">
+                <p>Qual sua idade?</p>
+            </div>
+
+            <!-- opções -->
+            <div class="resposta r1">
+                <section class="idades">
+
+                    <div class="linha">
+                        <article class="painel__idade">
+                            <label class="btn__card">
+                                <img th:src="@{/img/menor-18-removebg-preview.png}" alt="Menor de 18">
+                                <input type="radio" name="idade" value="menor_de_18" class="B1"> 
+                                <p class="txt__idade">Menos de 18</p>
+                            </label>
+                        </article>
+
+                        <article class="painel__idade">
+                            <label class="btn__card">
+                                <img th:src="@{/img/18-29-removebg-preview.png}" alt="18 a 29 anos">
+                                <input type="radio" name="idade" value="18_a_29" class="B1">
+                                <p class="txt__idade">18 à 29 anos</p>
+                            </label>
+                        </article>
+                    </div>
+
+                    <div class="linha">
+                        <article class="painel__idade">
+                            <label class="btn__card">
+                                <img th:src="@{/img/30_-_39-removebg-preview.png}" alt="30 a 39 anos">
+                                <input type="radio" name="idade" value="30_a_39" class="B1">
+                                <p class="txt__idade">30 à 39 anos</p>
+                            </label>
+                        </article>
+
+                        <article class="painel__idade">
+                            <label class="btn__card">
+                                <img th:src="@{/img/+40-removebg-preview.png}" alt="Mais de 40">
+                                <input type="radio" name="idade" value="mais_de_40" class="B1">
+                                <p class="txt__idade">Mais de 40 anos</p>
+                            </label>
+                        </article>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+        <!-- sua menstruação é regular? -->
+        <div id="section2" class="formulario section hidden">
+
+            <div class="pergunta">
+                <button class="volta B0"><img th:src="@{/img/back-vector.svg}" alt=""></button>
+                <p>Sua menstruação é regular?</p>
+            </div>
+
+            <!-- opções -->
+            <div class="resposta r2">
+                <ul class="perguntas">
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">Sim</p>
+                            <input type="radio" name="menstruacao_regular" value="1" class="B2">
+                        </label>
+                    </li>
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">Não</p>
+                            <input type="radio" name="menstruacao_regular" value="0" class="B2">
+                        </label>
+                    </li>
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">Não Monitoro</p>
+                            <input type="radio" name="menstruacao_regular" value="null" class="B2">
+                        </label>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <!-- você usa algum método contraceptivo? -->
+        <div id="section3" class="formulario section hidden">
+
+            <div class="pergunta">
+                <button class="volta B1"><img th:src="@{/img/back-vector.svg}" alt=""></button>
+                <p>Você usa algum método contraceptivo?</p>
+            </div>
+
+            <!-- opções -->
+            <ul class="perguntas">
+                <li class="perguntas__btn">
+                    
+                    <label class="pergunta__label">
+                        <p class="pergunta__txt">Sim</p>
+                        <input type="radio" name="usa_contraceptivo" value="1" class="B3">
+                    </label>
+                </li>
+
+                <li class="perguntas__btn">
+                    <label class="pergunta__label">
+                        <p class="pergunta__txt">Não</p>
+                        <input type="radio" name="usa_contraceptivo" value="0" class="B4">
+                    </label>
+                </li>
+
+            </ul>
+        </div>
+        
+        <!-- se sim, qual? -->
+        <div id="section4" class="formulario section hidden">
+
+            <div class="pergunta">
+                <button class="volta B2"><img th:src="@{/img/back-vector.svg}" alt=""></button>
+                <p>Qual?</p>
+            </div>
+
+            <!-- opções -->
+            <div class="resposta r4">
+                <ul class="perguntas">
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">Pílulas</p>
+                            <input type="radio" name="tipo_contraceptivo" value="Pílulas" class="B4">
+                        </label>
+                    </li>
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">Implante</p>
+                            <input type="radio" name="tipo_contraceptivo" value="Implante" class="B4">
+                        </label>
+                    </li>
+
+                    <li class="perguntas__btn">
+                        <label class="pergunta__label">
+                            <p class="pergunta__txt">DIU</p>
+                            <input type="radio" name="tipo_contraceptivo" value="DIU" class="B4">
+                        </label>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- período da menstruação -->
+        <div id="section5" class="formulario section hidden">
+
+            <div class="pergunta">
+                <button class="volta B2"><img th:src="@{/img/back-vector.svg}" alt=""></button>
+                <p>Último Dia da Menstruação:</p>
+            </div>
+
+            <div class="calendario-container">
+
+                <div class="campo-calendario">
+                    <label for="ultima-menstruacao">Primeiro dia da última menstruação:</label>
+                    <input type="text" id="ultima-menstruacao" placeholder="Selecione a data">
+                </div>
+
+                <div class="campo-calendario">
+                    <label for="periodo">Selecione o Período do Ciclo:</label>
+                    <input type="text" id="periodo" placeholder="Selecione o período">
+                </div>
+
+            </div>
+
+            <!-- fim da pesquisa -->
+            <div class="btn__final">
+                <button class="btn__fim B5">Finalizar pesquisa</button>
+            </div>
+            
+        </div>
+
+        <div id="section6" class="formulario section hidden">
+            <div class="ultima__pag">
+                <p>Obrigada por nos ajudar a<br>te entender melhor!</p>
+                <button class="volta B4"><img th:src="@{/img/back-vector.svg}" alt=""></button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- vlibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+
+    </div>
+
+    <script th:src="@{https://cdn.jsdelivr.net/npm/flatpickr}"></script>
+    <script th:src="@{https://vlibras.gov.br/app/vlibras-plugin.js}"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    <!-- script local -->
+    <script type="text/javascript" th:src="@{perguntas.js}"></script>
+</body>
+</html>

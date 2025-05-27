@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- meta e estilos -->
+<html xmlns:th="https://www.thymeleaf.org" lang="pt-BR">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Gravidez</title>
+  <link rel="stylesheet" th:href="@{homeGravidezStyle.css}" />
+  <script type="module" th:src="@{https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js}"></script>
+  <script th:src="@{global-darkmode.js}"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img th:src="@{/img/navbar/Logo_dalia.png}" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li class="Home"><a th:href="@{/home/index.html}"><img th:src="@{/img/navbar/Home-full__nav.svg}" alt=""></a></li>
+            <li class="Calendario"><a th:href="@{/calendario/calendario.html}"><img th:src="@{/img/navbar/Calendar__nav.svg}"></a></li>
+            <li class="forum"><a th:href="@{/forum/forum.html}"><img th:src="@{/img/navbar/Fórum__nav.svg}"></a></li>
+            <li class="principal"><a th:href="@{/principal/principal.html}"><img th:src="@{/img/navbar/Flower__nav.svg}" alt=""></a></li>
+            <li class="perfil"><a th:href="@{/perfil/perfil.html}"><img th:src="@{/img/navbar/Perfil__nav.svg}"></a>
+            </li>
+        </ul>
+      
+    </nav>
+  </header>
+<main>
+  <section class="banner">
+    <model-viewer
+      id="bebe"
+      th:src="@{/modelo3d/fetus.glb}" 
+      autoplay 
+      camera-controls 
+      disable-zoom 
+      auto-rotate
+      alt="Modelo 3D do bebê" 
+      shadow-intensity="1" 
+      environment-image="neutral"
+      style="width: 100%; height: 500px;">   
+    </model-viewer>
+  </section>
+
+  <section class="saude">
+    <h1>Sobre a sua saúde e a do seu bebê</h1>
+    <div class="botoes-saude">
+      <button class="button-saude">Cadernos de Vacinação</button>
+      <button class="button-saude">Mudanças no Corpo</button>
+      <button class="button-saude">Alimentação</button>
+    </div>
+  </section>
+ 
+  <section class="registro">
+    <div class="registro-texto">
+      <h1>Registro Diário</h1>
+      <h2>Informações necessárias para o acompanhamento</h2>
+    </div>
+    <div class="botoes-registro">
+        <button class="button-registro">Registrar Agora</button>
+        <button class="button-registro">Ver Registros</button>
+    </div>
+  </section>
+ 
+  <section class="informacoes">
+    <div class="card" style="background-color: #CDD9B2;">
+      <a th:href="@{https://www.clinicaceu.com.br/blog/gravidez-saudavel-dicas-imperdiveis-futuras-mamaes/}">
+        <img th:src="@{/img/home_img/mulher grávida.png}">
+        <p>Hábitos que auxiliam mães a se adaptarem a uma nova rotina</p>
+      </a>
+     </div>
+
+    <div class="card" style="background-color: #E3C3D8;">
+       <a th:href="@{https://www.gazetadopovo.com.br/conteudo-publicitario/veg-e-lev/alimentacao-saudavel-gravidez/}">
+        <img th:src="@{/img/home_img/alimentos.png}">
+        <p>Alimentos essenciais para o desenvolvimento saudável do feto</p>
+        </a>
+    </div>
+
+    <div class="card" style="background-color: #FEDBA5;">
+      <a th:href="@{https://www.scielo.br/j/rbgo/a/6kMvyttht3c5Z334j68N7jQ#:~:text=Nesse%20per%C3%ADodo%2C%20atividades%20aer%C3%B3bicas%20na,na%20prepara%C3%A7%C3%A3o%20para%20o%20parto.}">
+        <img th:src="@{/img/home_img/mulher se exercitando.png}">
+        <p>Exercícios permitidos durante o período de gestação</p>
+      </a>
+    </div>
+
+    <div class="card" style="background-color: #FFC29E;">
+      <a th:href="@{https://institutonascer.com.br/psicologo-para-gestantes/#:~:text=Redu%C3%A7%C3%A3o%20da%20ansiedade%20e%20estresse,forma%20mais%20profunda%20e%20consciente.">
+        <img src="./img/home_img/saúde mental.png}">
+        <p>Saúde Mental: como a terapia pode ajudar nesse momento?</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="logo">
+          <img th:src="@{/img/navbar/Logo_dalia.png}" alt="Logo">
+        </div>
+        <div class="language-selector">
+            <img th:src="@{/img/home_img/bandeira.png}" alt="bandeira brasil">
+            <span>Português do Brasil</span>
+        </div>
+
+        <div class="social-media"> 
+            <a href="#" aria-label="Instagram">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="Facebook">
+                <i class="fa fa-facebook"></i>
+            </a>
+             <a href="#" aria-label="Youtube">
+                <i class="fa fa-youtube"></i>
+            </a>
+        </div>
+
+        <div class="footer-sections">
+            <div class="section">
+                <h4>Empresas</h4>
+                <a href="#">Sobre</a><br>
+                <a href="#">Marca</a>
+            </div>
+            <div class="section">
+                <h4>Recursos</h4>
+                <a href="#">Suporte</a><br>
+                <a href="#">Segurança</a><br>
+                <a href="#">Blog</a><br>
+                <a href="#">Comunidade</a>
+            </div>
+            <div class="section">
+                <h4>Políticas</h4>
+                <a href="#">Termos</a><br>
+                <a href="#">Privacidade</a><br>
+                <a href="#">Cookies</a><br>
+                <a href="#">Moderação</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- vlibras-->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+  <div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script th:src="@{https://vlibras.gov.br/app/vlibras-plugin.js}"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script th:src="@{script.js}"></script>
+<script th:src="@{https://code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Cria o botão de toggle
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '☰';
+    
+    // Cria o container do dropdown
+    const dropdownMenu = document.createElement('div');
+    dropdownMenu.className = 'dropdown-menu';
+    
+    // Clona o menu existente para dentro do dropdown
+    const navClone = document.querySelector('nav ul').cloneNode(true);
+    dropdownMenu.appendChild(navClone);
+    
+    // Adiciona os elementos ao header
+    const header = document.querySelector('header');
+    header.appendChild(menuToggle);
+    header.appendChild(dropdownMenu);
+    
+    // Adiciona evento de clique
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+    
+    // Fecha o menu ao clicar fora
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('show');
+    });
+    
+    // Previne que o clique no menu feche ele
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+</script>
+</body>
+</html>

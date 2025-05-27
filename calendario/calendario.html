@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- meta e estilos -->
+<html xmlns:th="https://www.thymeleaf.org" lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário Menstrual - Dália</title>
+    <link rel="shortcut icon" type="image/png" th:href="@{/img/navbar/dália_secundario.png}">
+    <link th:href='@{https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css}' rel='stylesheet' />
+    <link rel="stylesheet" th:href="@{calendario.css}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img th:src="@{/img/navbar/Logo_dalia.png}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="Home"><a th:href="@{/home/index.html}"><img th:src="@{/img/navbar/Home__nav.svg}" alt=""></a></li>
+                <li class="Calendario"><a th:href="@{/calendario/calendario.html}"><img th:src="@{/img/navbar/Calendar-full__nav.svg}"></a></li>
+                <li class="forum"><a th:href="@{/forum/forum.html}"><img th:src="@{/img/navbar/Fórum__nav.svg}"></a></li>
+                <li class="principal"><a th:href="@{/principal/principal.html}"><img th:src="@{/img/navbar/Flower__nav.svg}" alt=""></a></li>
+                <li class="perfil"><a th:href="@{/perfil/perfil.html}"><img th:src="@{/img/navbar/Perfil__nav.svg}"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="calendar-section">
+        <h2>Seu Calendário Menstrual</h2>
+        <div class="card-calendar">
+            <div id="calendar"></div> 
+        </div>
+        <p id="proxima-menstruacao"></p>
+        <button id="registrar-menstruacao">Registrar Menstruação</button>
+        <button id="fim-menstruacao" style="display: none;">Fim da Menstruação</button>
+    </div>
+    
+    <div class="explicacao">
+        <h3>Entendendo seu Ciclo</h3>
+        <div class="callendar__explanation">
+            <div class="callendar__explanation__title">
+                <div class="menstruacao-sample"></div><strong>Menstruação:</strong>
+            </div>
+            <p class="menstruacao">Os dias em vermelho indicam seu período menstrual.</p>
+        </div>
+        <div class="callendar__explanation">
+            <div class="callendar__explanation__title">
+                <div class="fertil-sample"></div><strong>Dias Férteis:</strong>
+            </div>
+            <p class="fertil">Os dias em azul indicam seu período fértil, quando há maior chance de engravidar.</p>
+        </div>
+        <div class="callendar__explanation">
+            <div class="callendar__explanation__title">
+                <div class="ovulacao-sample"></div><strong>Ovulação:</strong>
+            </div>
+            <p class="ovulacao">O dia em verde indica sua ovulação, o dia mais fértil do ciclo.</p>
+        </div>
+    </div>
+
+    <script th:src='@{https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js}'></script>
+    <script th:src='@{https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales/pt-br.js}'></script>
+    <script th:src="@{calendario.js}"></script>
+</body>
+</html>

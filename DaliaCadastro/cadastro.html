@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <!-- links -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" th:href="@{/cadastro.css}" />
+  <title>Dália Cadastro</title>
+  <link rel="shortcut icon" type="image/png" th:href="@{/img/navbar/dalia_secundario.png}" />
+</head>
+
+<body>
+  <div class="painel">
+
+    <!-- formulário -->
+    <div class="form-row">
+
+      <div class="cabecalho">
+        <a th:href="@{/dalia/dalia-login/login.html}" class="voltar">
+          <img th:src="@{/img/Back.svg}" alt="Voltar" />
+        </a>
+        <h1>Cadastro</h1>
+      </div>
+
+      <form th:action="@{/rotaCadastro}" method="post">
+
+        <!-- nome e sobrenome -->
+        <div class="nome_sobrenome">
+          <input type="text" th:field="*{name}" class="form-control__nm" id="name" placeholder="Nome" />
+          <input type="text" th:field="*{lastname}" class="form-control__sm" id="lastname" placeholder="Sobrenome" />
+        </div>
+
+        <!-- outros dados e tals -->
+        <div class="inputs">
+          <div class="form-group">
+            <input type="email" th:field="*{email}" class="form-control" id="email" placeholder="Email" />
+          </div>
+          <div class="seguranca form-group">
+            <input type="password" th:field="*{password}" class="form-control" id="password" placeholder="Crie uma senha" />
+          </div>
+          <div class="seguranca form-group">
+            <input type="password" name="passconfirmation" class="form-control" id="passconfirmation" placeholder="Confirme a senha" />
+          </div>
+        </div>
+
+        <!-- termos e condições -->
+        <label class="container">
+          Concordo com os <a href="#" class="termos__condicoes"> termos e condições </a>
+          <input type="checkbox" name="termos" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+
+        <!-- criar conta -->
+        <section>
+          <button type="submit">Criar Conta</button>
+        </section>
+
+      </form>
+
+      <!-- redes sociais -->
+      <div class="line-parent">
+        <div class="frame-child"></div>
+        <div class="ou-entre-com">Ou entre com</div>
+        <div class="frame-child"></div>
+      </div>
+
+      <div class="tags__redes">
+        <img class="tags" alt="" th:src="@{/img/Facebook.svg}" />
+        <img class="tags" alt="" th:src="@{/img/Google.svg}" />
+        <img class="tags" alt="" th:src="@{/img/Instagram.svg}" />
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- vlibras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script th:src="@{https://vlibras.gov.br/app/vlibras-plugin.js}"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <!-- script local -->
+  <script th:src="@{/cadastro.js}"></script>
+</body>
+
+</html>

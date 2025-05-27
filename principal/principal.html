@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- meta e estilos -->
+<html xmlns:th="https://www.thymeleaf.org" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{principal.css}">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap}" rel="stylesheet">
+    <title>Registro diario materno</title>
+    <link rel="shortcut icon" type="imagex/png" th:href="@{/navbar/dália_secundario.png}">
+    <script th:src="@{perfil-darkmode.js}"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img th:src="@{/navbar/Logo_dalia.png}" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="Home"><a th:href="@{/home/index.html}"><img th:src="@{/navbar/Home__nav.svg}" alt=""></a></li>
+                <li class="Calendario"><a th:href="@{/calendario/calendario.html}"><img h:src="@{/navbar/Calendar__nav.svg}"></a></li>
+                <li class="forum"><a th:href="@{/forum/forum.html}"><img th:src="@{/navbar/Fórum__nav.svg}"></a></li>
+                <li class="principal"><a th:href="@{/principal/principal.html}"><img th:src="@{/navbar/Flower-full__nav.svg}" alt=""></a></li>
+                <li class="perfil"><a th:href="@{/perfil/perfil.html}"><img th:src="@{/navbar/Perfil__nav.svg}"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1>Registro Diário</h1>
+            <div class="container-registro" alt="registro-diario">
+                <div class="imagem-fundo">
+                    <div class="recebe-registros" id="recebe-registros">
+                        <div class="registros-conteudo" id="registros-conteudo"></div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Como está seu humor hoje?</h1>
+                        <div class="mood-options">
+                            <label class="sentimento" for="happy1"><input type="radio" th:field="*{happy1}" id="happy1" name="mood" value="feliz">🥰</label>
+                            <label class="sentimento" for="happy2"><input type="radio" th:field="*{happy2}" id="happy2" name="mood" value="contente">😊</label>
+                            <label class="sentimento" for="neutro"><input type="radio" th:field="*{neutro}" id="neutro" name="mood" value="neutro">😐</label>
+                            <label class="sentimento" for="triste"><input type="radio" th:field="*{triste}" id="triste" name="mood" value="triste">😢</label>
+                            <label class="sentimento" for="bravo"><input type="radio" th:field="*{bravo}" id="bravo" name="mood" value="bravo">😠</label>
+                        </div>
+                </div>
+
+                <div class="registro">
+                    <h2>Quais sintomas você teve?</h1>
+                    <div alt="sintomas"></div>
+                    <div>
+                        <div id="lista-sintomas" class="sintomas__btn">
+                            <button class="sintoma" style="background-color: #fcd48b;" value="colicas">Cólicas</button>
+                            <button class="sintoma" style="background-color: #FFABAB;" value="dorCabeca">Dor de cabeça</button>
+                            <button class="sintoma" style="background-color: #FFC3A0;" value="cansaco">Cansaço</button>
+                            <button class="sintoma" style="background-color: #FFCCB6;" value="inchaço">Inchaço</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="registro">
+                    <h2>Registre sua alimentação:</h1>
+                    <div alt="alimentacao">
+                        <input type="text" th:field="*{alimentacao}" class="alimentacao" placeholder="Escreva o que comeu hoje">
+                    </div>
+                </div>
+                <div class="registro">
+                    <h2>O que você fez hoje?</h1>
+                    <div alt="hábitos"></div>
+                    <div id="lista-sintomas" class="sintomas__btn">
+                        <button class="sintoma" style="background-color: #fcd48b;" value="leituras" id="BotaoSintoma">Leitura</button>
+                        <button class="sintoma" style="background-color: #FFABAB;" value="meditação" id="BotaoSintoma">Meditação</button>
+                        <button class="sintoma" style="background-color: #FFC3A0;" value="caminhadas">Caminhadas</button>
+                        <button class="sintoma" style="background-color: #FFCCB6;" value="terapia">Terapia</button>
+                    </div>
+                </div>
+                <button class="save">Salvar</button>
+            </div>
+            </div>
+        </div>
+    </main>
+    
+
+    
+<script th:src="@{principal.js}"></script>
+
+<!-- vlibras-->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+  <div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+<script th:src="@{https://vlibras.gov.br/app/vlibras-plugin.js}"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script th:src="@{https://code.jquery.com/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script th:src="@{https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js}" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    // Cria o botão de toggle
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '☰';
+    
+    // Cria o container do dropdown
+    const dropdownMenu = document.createElement('div');
+    dropdownMenu.className = 'dropdown-menu';
+    
+    // Clona o menu existente para dentro do dropdown
+    const navClone = document.querySelector('nav ul').cloneNode(true);
+    dropdownMenu.appendChild(navClone);
+    
+    // Adiciona os elementos ao header
+    const header = document.querySelector('header');
+    header.appendChild(menuToggle);
+    header.appendChild(dropdownMenu);
+    
+    // Adiciona evento de clique
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show');
+    });
+    
+    // Fecha o menu ao clicar fora
+    document.addEventListener('click', function() {
+        dropdownMenu.classList.remove('show');
+    });
+    
+    // Previne que o clique no menu feche ele
+    dropdownMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: 605%;
+}
+
+
+.section {
+    display: none; /* Oculta todas as seções por padrão */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease; 
+}
+
+.section.active {
+    display: block; 
+    opacity: 1; 
+}
+
+
+.idades{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.painel__idade {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: rgb(161 121 188);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.painel__idade input[type="radio"] {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    width: 20px;
+    height: 20px;
+    accent-color: rgba(205, 217, 178, 1); 
+    cursor: pointer;
+}
+
+
+.painel__idade:hover {
+    background-color: rgba(255, 230, 226, 1); 
+}
+
+.painel__idade img{
+    width: 170px;
+    height: 180px;
+}
+
+.txt__idade{
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-family: "Catamaran", sans-serif;
+    color: white;
+    background-color: rgb(93 86 114);
+    padding: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.perguntas__btn {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 10px 0;
+}
+
+
+.pergunta__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(161 121 188); 
+    border-radius: 20px;
+    padding: 15px 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.btn__final{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+.btn__fim{
+    border: transparent;
+    font-family: "Catamaran", sans-serif;
+    font-size: large;
+    color: white;
+    width: 250px;
+    background-color: rgb(161 121 188); 
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+}
+
+.btn__fim:hover{
+    color: black;
+    background-color: rgba(255, 230, 226, 1); 
+    transition: color 0.3s ease;
+}
+
+.pergunta__label:hover {
+    background-color: rgba(255, 230, 226, 1); 
+    transition: color 0.3s ease;
+}
+
+.pergunta__txt {
+    font-size: 22px;
+    color: white; 
+    font-family: "Catamaran", sans-serif;
+    margin: 0;
+}
+
+.pergunta__label:hover .pergunta__txt{
+    color: black;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: rgba(205, 217, 178, 1); 
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    accent-color: rgba(124, 127, 205, 1); 
+}
+
+.ultima__pag p{
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.pergunta p{
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.resposta{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formulario{        
+        height: 100vh; 
+        width: 100vw;  
+        background-image: url('img/Gradient.png');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box; 
+}
+     
+.pergunta{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+        
+
+.resposta{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.volta{
+    position:  absolute;
+    left: 30px;
+    background: none;
+    border: none;
+}
+img{
+    cursor: pointer;
+    justify-content: left;
+    display: flex;
+    align-items: start;
+}
+
+
+.obrigado{
+    font-size: 50px;
+    margin-top: 60%;
+}
+
+
+.calendario-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px; 
+}
+
+.campo-calendario {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid rgba(124, 127, 205, 1);
+    border-radius: 10px;
+    font-family: "Catamaran", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+.campo-calendario label {
+    text-align: center;
+    font-size: medium;
+    font-family: "Catamaran", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid rgba(124, 127, 205, 1);
+    border-radius: 10px;
+    font-family: "Catamaran", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background-color:#f0f0f0;
+}
+
+.dayContainer{
+    background-color: rgba(124, 127, 205, 1);
+}
+
+.flatpickr-day:hover {
+    background-color: rgba(205, 217, 178, 1); 
+    color: black;
+}
+
+.flatpickr-day.selected {
+    background-color: rgba(124, 127, 205, 1); 
+    color: black;
+}
+span.flatpickr-weekday{
+    color: black !important;
+}
+
+.flatpickr-current-month input.cur-year{
+    color: black !important;
+}
+
+.flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay, .flatpickr-day.notAllowed, .flatpickr-day.notAllowed.prevMonthDay, .flatpickr-day.notAllowed.nextMonthDay {
+    color: burlywood  !important;
+
+    background: transparent;
+    border-color: transparent;
+    cursor: default;
+}   
