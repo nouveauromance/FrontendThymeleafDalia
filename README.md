@@ -21,7 +21,10 @@ registro diário e auxílio para as mães.
 
 ## Instalação:
 
-📌 Instale clonando o repositório
+📌 Instale clonando o repositório:
+```bash
+  git clone https://github.com/nouveauromance/FrontendThymeleafDalia.git
+```
     
 ## Autores (equipe Dália)
 
