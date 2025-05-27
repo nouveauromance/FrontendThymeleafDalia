@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salvos</title>
-    <link rel="stylesheet" href="denuncia.css">    
-    <link rel="shortcut icon" type="imagex/png" href="./img/navbar/dália_secundario.png">
+    <link rel="stylesheet" th:href="@{denuncia.css}">    
+    <link rel="shortcut icon" type="imagex/png" th:href="@{/img/navbar/dália_secundario.png}">
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="./img/navbar/Logo_dalia.png" alt="Logo">
+            <img th:src="@{/img/navbar/Logo_dalia.png}" alt="Logo">
         </div>
         <nav>
             <ul>
-                <li class="Home"><a href="../home/index.html"><img src="./img/navbar/Home__nav.svg" alt=""></a></li>
-                <li class="Calendario"><a href="../calendario/calendario.html"><img src="./img/navbar/Calendar__nav.svg"></a></li>
-                <li class="forum"><a href="../forum/forum.html"><img src="./img/navbar/Fórum__nav.svg"></a></li>
-                <li class="principal"><a href="../principal/principal.html"><img src="./img/navbar/Flower__nav.svg" alt=""></a></li>
-                <li class="perfil"><a href="../perfil/perfil.html"><img src="./img/navbar/profile-full__nav.svg"></a></li>
+                <li class="Home"><a th:href="@{/home/index.html}"><img th:src="{/img/navbar/Home__nav.svg}" alt=""></a></li>
+                <li class="Calendario"><a th:href="@{/calendario/calendario.html}"><img th:src="{/img/navbar/Calendar__nav.svg}"></a></li>
+                <li class="forum"><a th:href="@{/forum/forum.html}"><img th:src="{/img/navbar/Fórum__nav.svg}"></a></li>
+                <li class="principal"><a th:href="@{/principal/principal.html}"><img th:src="{/img/navbar/Flower__nav.svg}" alt=""></a></li>
+                <li class="perfil"><a th:href="@{/perfil/perfil.html}"><img th:src="{/img/navbar/profile-full__nav.svg}"></a></li>
             </ul>
         </nav>
     </header>
@@ -38,9 +38,9 @@
     </main>
     <footer class="footer">
         <div class="footer-content">
-            <img src="./img/navbar/Logo_dalia.png" alt="logo dália" class="footer-logo">
+            <img th:src="@{/img/navbar/Logo_dalia.png}" alt="logo dália" class="footer-logo">
             <div class="language-selector">
-                <img src="./img/home_img/bandeira.png" alt="bandeira brasil">
+                <img th:src="@{/img/home_img/bandeira.png}" alt="bandeira brasil">
                 <span>Português do Brasil</span>
             </div>
             <div class="social-media"> 
